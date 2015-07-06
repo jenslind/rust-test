@@ -22,8 +22,14 @@ impl Dog {
         println!("TESTING");
     }
 
+    // Paaaaanic returns nothing
     fn panic_much(&self) -> ! {
         panic!("PAAAANIC");
+    }
+
+    // Static method
+    fn test2() -> i32 {
+        28
     }
 }
 
@@ -42,6 +48,9 @@ fn main() {
   dog.set_name(":(".to_string());
 
   println!("{}", dog.name);
+
+  let magic_number = Dog::test2();
+  println!("Magic number: {}", magic_number);
 
   dog.panic_much();
 }
