@@ -21,6 +21,10 @@ impl Dog {
     fn test(&self) {
         println!("TESTING");
     }
+
+    fn panic_much(&self) -> ! {
+        panic!("PAAAANIC");
+    }
 }
 
 fn main() {
@@ -38,4 +42,6 @@ fn main() {
   dog.set_name(":(".to_string());
 
   println!("{}", dog.name);
+
+  dog.panic_much();
 }
